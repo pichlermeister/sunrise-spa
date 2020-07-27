@@ -14,15 +14,24 @@ export default {
     api: process.env.VUE_APP_CT_API_HOST || 'https://api.europe-west1.gcp.commercetools.com',
   },
   languages: {
+    "de-DE": 'Deutsch (Deutschland)',
     en: 'English',
     de: 'Deutsch',
   },
   countries: {
+    CH: 'Schweiz',
     DE: 'Deutschland',
     US: 'United States',
   },
   formats: {
     number: {
+      CH: {
+        currency: {
+          style: 'currency',
+          currency: 'CHF',
+          currencyDisplay: 'symbol',
+        },
+      },
       DE: {
         currency: {
           style: 'currency',
@@ -38,6 +47,13 @@ export default {
       },
     },
     datetime: {
+      CH: {
+        short: {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        },
+      },
       US: {
         short: {
           year: 'numeric',
